@@ -132,7 +132,7 @@ column_num_unique(data = counts_raw,column_name = "doi")
 names_of_columns <- colnames(counts_raw)
 my_column <- "doi"
 column_num_unique(data = counts_raw,
-                  column_name = names_of_columns)
+                  column_name = my_column)
 
 unique_col_ct <- function(data){
   data_column_names <- colnames(data)
