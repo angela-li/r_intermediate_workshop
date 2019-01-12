@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Arjun Biddanda" />
+
+
+<title>Trial Report</title>
+
+<script src="trial_report_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="trial_report_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="trial_report_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="trial_report_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="trial_report_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="trial_report_files/navigation-1.1/tabsets.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Trial Report</h1>
+<h4 class="author"><em>Arjun Biddanda</em></h4>
+<h4 class="date"><em>1/12/2019</em></h4>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#initial-analysis"><span class="toc-section-number">1</span> Initial Analysis</a><ul>
+<li><a href="#reading-in-data-on-plos-papers"><span class="toc-section-number">1.1</span> Reading in data on PLoS Papers</a></li>
+<li><a href="#diagnostic-plots"><span class="toc-section-number">1.2</span> Diagnostic Plots</a></li>
+<li><a href="#some-vague-statements-about-our-data"><span class="toc-section-number">1.3</span> Some vague statements about our data</a></li>
+<li><a href="#exercise"><span class="toc-section-number">1.4</span> Exercise :</a></li>
+<li><a href="#result"><span class="toc-section-number">1.5</span> Result</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="initial-analysis" class="section level1">
+<h1><span class="header-section-number">1</span> Initial Analysis</h1>
+<div id="reading-in-data-on-plos-papers" class="section level2">
+<h2><span class="header-section-number">1.1</span> Reading in data on PLoS Papers</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb1-2" title="2">counts_raw &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="st">&quot;data/counts-raw.txt.gz&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">n_pubs &lt;-<span class="st"> </span><span class="kw">dim</span>(counts_raw)[<span class="dv">1</span>]</a></code></pre></div>
+</div>
+<div id="diagnostic-plots" class="section level2">
+<h2><span class="header-section-number">1.2</span> Diagnostic Plots</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">  weeks_since_pub &lt;-<span class="st"> </span>counts_raw<span class="op">$</span>daysSincePublished <span class="op">/</span><span class="st"> </span><span class="dv">7</span></a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="kw">hist</span>(weeks_since_pub, <span class="dt">xlab =</span> <span class="st">&quot;# of Weeks&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Weeks since Publication&quot;</span>)</a></code></pre></div>
+<div class="figure">
+<img src="trial_report_files/figure-html/histogram_weeks_since_pubs-1.png" alt="Figure 1 : Weeks since publication per paper" width="480" />
+<p class="caption">
+Figure 1 : Weeks since publication per paper
+</p>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">plot</span>(counts_raw<span class="op">$</span>daysSincePublished, counts_raw<span class="op">$</span>wosCountThru2011)</a></code></pre></div>
+<p><img src="trial_report_files/figure-html/scatterplot_pubs_vs_citations-1.png" width="672" /></p>
+</div>
+<div id="some-vague-statements-about-our-data" class="section level2">
+<h2><span class="header-section-number">1.3</span> Some vague statements about our data</h2>
+<p>Here is an example of a mathematical function : <span class="math inline">\(y = x^2\)</span></p>
+<p>This dataset consists of 24331 publications.</p>
+</div>
+<div id="exercise" class="section level2">
+<h2><span class="header-section-number">1.4</span> Exercise :</h2>
+<ol style="list-style-type: decimal">
+<li>Plot a histogram of your favorite variable from the dataset</li>
+<li>make a scatter plot of your favorite variable against citation counts a. Comment on whether it has a marked effect on citation counts b. If appropriate create a scatter plot of log-transformed values</li>
+<li>Verify that the plots would be well-received by a collaborator!!</li>
+</ol>
+</div>
+<div id="result" class="section level2">
+<h2><span class="header-section-number">1.5</span> Result</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">hist</span>(counts_raw<span class="op">$</span>year, <span class="dt">xlab=</span><span class="st">&quot;Year&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Number of Publications per Year&quot;</span>)</a></code></pre></div>
+<p><img src="trial_report_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">plot</span>(counts_raw<span class="op">$</span>year, counts_raw<span class="op">$</span>wosCountThru2011)</a></code></pre></div>
+<p><img src="trial_report_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
