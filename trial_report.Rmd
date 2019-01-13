@@ -104,7 +104,6 @@ head(publication_date)
 num_unique <- function(x){
   unique_data <- unique(x)
   length_unique <- length(unique_data)
-  print("I'm in num_unique!")
   return(length_unique)
 }
 debug(num_unique)
@@ -129,6 +128,15 @@ column_num_unique(data = counts_raw,column_name = "doi")
 
 
 ```{r}
+fake_fun <- function(){
+ x <- 4 
+  
+  
+}
+```
+
+
+```{r}
 names_of_columns <- colnames(counts_raw)
 my_column <- "doi"
 column_num_unique(data = counts_raw,
@@ -146,8 +154,62 @@ unique_col_ct <- function(data){
   return(result)
 }
 
+debug(unique_col_ct)
+doy_cols <- which(colnames(counts_raw)=="doy")
+unique_col_ct(counts_raw[,doy_cols])
 ```
 
+
+```{r}
+counts_columns <- c("facebookShareCount",
+                    "facebookLikeCount")
+
+max_of_each_col <- function(data,count_colnames){
+  number_of_columns <- length(count_colnames)
+  result <- integer(number_of_columns)
+  for(i in seq_along(count_colnames)){
+    my_column <- count_colnames[i]
+    my_vector <- data[[my_column]]
+    result[i] <- max(my_vector)
+  }
+  return(result)
+}
+
+debug(max_of_each_col)
+max_of_each_col(counts_raw,counts_columns)
+
+```
+
+
+## Quick refresher on subsetting with R
+
+There are many ways to subset data in R
+### We can subset a vecter by position with `[`
+```{r}
+x <- c(8,9,3,5,7)
+x[4]
+y <- c(1,2)
+x[y]
+z <- length(x)
+x[z]
+```
+We can also subset using double bracket syntax
+to get *one* element back
+```{r}
+x[[1]]
+x[[y]]
+```
+## Indexing dataframes
+Dataframes can also be indexed with single bracket `[` and double bracket `[[` syntax depending on what we want
+
+```{r}
+counts_raw[,1]
+y <- c(1,2)
+counts_raw[,y]
+counts_raw[,c("doi","daysSincePublished")]
+(counts_vector <- counts_raw[["doi"]])
+(doi_dataframe <- counts_raw[,"doi"])
+```
 
 
 
